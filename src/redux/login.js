@@ -1,13 +1,13 @@
 const LOGIN = "LOGIN";
 const PASSWORD = "PASSWORD";
-const VERIFICATION = "VERIFICATION"
+const VERIFICATION = "VERIFICATION";
 
 
 const initialState = {
-    login: 'developer21',
-    password: '123456',
-    loginInput: '',
-    passwordInput: '',
+    login: "developer21",
+    password: "123456",
+    loginInput: "",
+    passwordInput: "",
     disabled: true
 };
 
@@ -24,19 +24,15 @@ export const loginReducer = (state = initialState, action) => {
                 passwordInput: action.payload
             };
         case VERIFICATION:
-            debugger
             if (state.loginInput === state.login && state.passwordInput === state.password) {
-                debugger
                 return {
                     ...state,
                     disabled: false
                 }
-            } else {
-                return  {
+            } return  {
                     ...state,
                     disabled: true
-                }
-            }
+                };
         default:
             return state
     }

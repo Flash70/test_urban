@@ -1,9 +1,9 @@
 
 
-export const Profile = ({dataLogin}) => {
+export const Profile = ({login}) => {
     return (
         <div>
-            <h1>{dataLogin.login}</h1>
+            <h1>{login}</h1>
         </div>
-    )
-}
+    );
+};
